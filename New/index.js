@@ -50,6 +50,8 @@ var title =document.querySelector('items .title');
 var h1= document.querySelector('items h1');
 container.insertBefore(newDe, h1);
 */
+
+
 var form = document.getElementById('addForm');
 var itemList = document.getElementById('items');
 var filter = document.getElementById('filter');
@@ -67,6 +69,7 @@ function addItem(e){
 
   // Get input value
   var newItem = document.getElementById('item').value;
+  var newItem1 = document.getElementById('item1').value;
 
   // Create new li element
   var li = document.createElement('li');
@@ -74,6 +77,7 @@ function addItem(e){
   li.className = 'list-group-item';
   // Add text node with input value
   li.appendChild(document.createTextNode(newItem));
+  li.appendChild(document.createTextNode(newItem1));
 
   // Create del button element
   var deleteBtn = document.createElement('button');
@@ -89,7 +93,7 @@ function addItem(e){
 
   // Append li to list
   itemList.appendChild(li);
-  const paragraph = document.getElementById("items");
+  // Edit Button: 
 var editBtn = document.createElement('button');
 editBtn.className = 'btn btn-danger btn-sm float-right delete';
 editBtn.appendChild(document.createTextNode('E'));
