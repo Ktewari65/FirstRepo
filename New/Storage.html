@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="SaveToLocalStorage(event)">
+    <label id="Text">Name</label>
+    <input type="email"  name="username"/> 
+    <label> ID</label>
+    <input type ="Text"  name="emailid"> 
+    <button>Submit</button>
+</form>
+<script>
+    function SaveToLocalStorage(event){
+        event.preventDefault();
+        const name =event.target.username.value;
+        const id = event.target.emailid.value;
+        localStorage.setItem('name', name);
+        localStorage.setItem('email', email);
+
+    }
+</script>
+</body>
+</html>
