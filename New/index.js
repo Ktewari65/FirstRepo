@@ -78,6 +78,7 @@ function addItem(e){
   // Add text node with input value
   li.appendChild(document.createTextNode(newItem));
   li.appendChild(document.createTextNode(newItem1));
+  
 
   // Create del button element
   var deleteBtn = document.createElement('button');
@@ -127,4 +128,6 @@ function filterItems(e){
     }
   });
 }
+
+
 
