@@ -1,4 +1,4 @@
-/*
+
 // getElementsByClassName:
 
 var items= document.getElementsByClassName('list-group-item');
@@ -49,7 +49,7 @@ newDe.appendChild(newDText);
 var title =document.querySelector('items .title');
 var h1= document.querySelector('items h1');
 container.insertBefore(newDe, h1);
-*/
+
 
 
 var form = document.getElementById('addForm');
