@@ -13,12 +13,13 @@
     <label id="email">Email ID</label>
     <input type ="email"  name="emailid" required> 
     <button>Submit</button>
+    <button>Delete</button>
 </form>
 <script>
     function SaveToLocalStorage(event){
         event.preventDefault();
         const name =event.target.username.value;
-        const id = event.target.emailid.value;
+        const email = event.target.emailid.value;
         localStorage.setItem('name', name);
         localStorage.setItem('email', email);
 
@@ -34,7 +35,19 @@
     function showUserOnScreen(obj){
         const  parentEle= document.getElementById('listOfitems')
     parentEle.innerHTML = `<li>$(obj.name) -  $(obj.email)</li>`
+
+    const deleteBtn=document.createElement('input')
+    deleteBtn.type= "button"
+    deleteBtn.value="delete" 
+    deleteBtn.onclick= ()=> {
+        localStorage.removeItem(obj.email)
+        parentEle.removeChild(childEle)
+ }
+ childEle.appendChild(deleteBtn)
+ childEle.appendChild(childEle)
     }
+
+    
 </script>
 </body>
 </html>
